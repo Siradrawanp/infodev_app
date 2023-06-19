@@ -31,7 +31,11 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 160,),
               Text(
                 'Daftar',
-                style: Theme.of(context).textTheme.headlineLarge,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold,
+                  fontSize: Theme.of(context).textTheme.headlineLarge?.fontSize,
+                ),
               ),
               const SizedBox(height: 16,),
               TextFormField(

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:infodev_app/presentation/pages/home_page.dart';
-import 'package:infodev_app/presentation/pages/signup_page.dart';
-
+import 'presentation/pages/home_page.dart';
+import 'presentation/pages/signup_page.dart';
 import 'presentation/pages/login_page.dart';
 
 void main() async {
@@ -22,9 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
-        useMaterial3: true,
+      theme: ThemeData.from(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.cyan),
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/loginPage',
