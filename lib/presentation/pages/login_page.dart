@@ -37,13 +37,13 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 160,),
               TextFormField(
                 controller: _usernameController,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Username',
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0))
+                    borderRadius: BorderRadius.circular(8.0)
                   ),
                 ),
-                validator: (String? value) {
+                validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Tidak boleh kosong';
                   } else if (!_boxAccounts.containsKey(value)) {
@@ -59,8 +59,8 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: _obscurePass,
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0))
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0)
                   ),
                   suffixIcon: IconButton(
                     onPressed: () {
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                     icon: Icon(Icons.visibility)
                   ),
                 ),
-                validator: (String? value) {
+                validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Tidak boleh kosong';
                   } else if (value != _boxAccounts.get(_usernameController.text)) {
