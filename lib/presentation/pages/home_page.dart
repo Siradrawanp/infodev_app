@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:infodev_app/presentation/widgets/clock.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +12,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final Box _boxLogin = Hive.box('login');
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = <Widget>[
+    Clock(),
+    Icon(Icons.list_alt_rounded),
+    Icon(Icons.bar_chart_rounded)
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +55,10 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            const SizedBox(height: 16,),
-            Text('Homepage')
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: _pages.elementAt(_selectedIndex),
         ),
       ),
       bottomNavigationBar: ClipRRect(
@@ -71,7 +83,9 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.bar_chart_rounded),
               label: 'Chart'
             ),
-          ]
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
         ),
       ),
     );
