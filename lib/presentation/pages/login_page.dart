@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                     _boxLogin.put('loginstatus', true);
                     _boxLogin.put('userName', _usernameController.text);
 
-                    Navigator.of(context).pushReplacementNamed('./homePage');
+                    Navigator.of(context).pushReplacementNamed('/homePage');
                   }
                 },
                 style: ElevatedButton.styleFrom(
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                   const Text('Tidak punya akun?'),
                   TextButton(
                     onPressed: (){
-                      Navigator.of(context).pushNamed('./signupPage');
+                      Navigator.of(context).pushNamed('/signupPage');
                     }, 
                     child: const Text('Daftar')
                   )
