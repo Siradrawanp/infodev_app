@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
-                    _boxLogin.put('loginstatus', true);
+                    _boxLogin.put('loginStatus', true);
                     _boxLogin.put('userName', _usernameController.text);
 
                     Navigator.of(context).pushReplacementNamed('/homePage');

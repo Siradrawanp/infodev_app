@@ -16,7 +16,6 @@ class PageB extends StatefulWidget {
 class _PageBState extends State<PageB> {
   final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   Map<String, dynamic> _deviceData = <String, dynamic>{};
-  //final Map<String, dynamic> _readWebBrowserInfo = _readWebBrowserInfo(WebBrowserInfo);
 
   Future<void> initPlatformState() async {
     var deviceData = <String, dynamic>{};
@@ -79,7 +78,6 @@ class _PageBState extends State<PageB> {
                   ),
                   Expanded(
                     child: Container(
-                      //padding: const EdgeInsets.symmetric(vertical: 8.0),
                       padding: const EdgeInsets.all(12.0),
                       child: Text(
                         '${_deviceData[property]}',

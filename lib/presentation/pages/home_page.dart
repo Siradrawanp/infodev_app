@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:infodev_app/presentation/pages/b_page.dart';
+import 'package:infodev_app/presentation/pages/c_page.dart';
 import 'a_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = <Widget>[
     PageA(),
     PageB(),
-    Icon(Icons.bar_chart_rounded)
+    PageC(),
   ];
 
   void _onItemTapped(int index) {

@@ -16,7 +16,8 @@ class _PageAState extends State<PageA> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Date(),
+        SizedBox(height: 8.0,),
       ],
     );
-  }
+  }  
 }
