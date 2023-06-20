@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:infodev_app/presentation/pages/b_page.dart';
 import 'a_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = <Widget>[
     PageA(),
-    Icon(Icons.list_alt_rounded),
+    PageB(),
     Icon(Icons.bar_chart_rounded)
   ];
 
@@ -30,6 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: const Text('Device Info'),
         centerTitle: true,

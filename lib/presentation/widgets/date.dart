@@ -12,7 +12,7 @@ class Date extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primary.withOpacity(0.6),
+        color: Theme.of(context).colorScheme.primary.withOpacity(0.7),
         borderRadius: BorderRadius.circular(12.0)
       ),
       child: Column(
@@ -21,7 +21,10 @@ class Date extends StatelessWidget {
           Clock(),
           Text(
             formater,
-            style: Theme.of(context).textTheme.headlineSmall,
+            style: TextStyle(
+              fontSize: Theme.of(context).textTheme.headlineSmall?.fontSize,
+              color: Colors.white
+            ),
           ),
           const SizedBox(height: 8.0,)
         ],

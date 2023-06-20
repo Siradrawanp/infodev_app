@@ -12,7 +12,7 @@ class PageA extends StatefulWidget {
 class _PageAState extends State<PageA> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Date(),

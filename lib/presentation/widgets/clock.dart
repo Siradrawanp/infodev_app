@@ -20,6 +20,7 @@ class Clock extends StatelessWidget {
               '${getSystemTime()}',
               style: TextStyle(
                 fontSize: Theme.of(context).textTheme.displayMedium?.fontSize,
+                color: Colors.white
               ),
             );
           }

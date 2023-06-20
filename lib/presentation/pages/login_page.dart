@@ -33,8 +33,21 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(height: 160,),
+              const SizedBox(height: 100,),
+              Text(
+                'hello there',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              Text(
+                'Welcome',
+                style: TextStyle(
+                  fontSize: Theme.of(context).textTheme.displayMedium?.fontSize,
+                  color: Theme.of(context).colorScheme.primary
+                ),
+              ),              
+              const SizedBox(height: 60,),
               TextFormField(
                 controller: _usernameController,
                 decoration: InputDecoration(
