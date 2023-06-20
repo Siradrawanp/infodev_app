@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/date.dart';
+
 class PageA extends StatefulWidget {
   const PageA({super.key});
 
@@ -11,9 +13,9 @@ class _PageAState extends State<PageA> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        
+        Date(),
       ],
     );
   }

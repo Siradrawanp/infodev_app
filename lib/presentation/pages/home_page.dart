@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:infodev_app/presentation/widgets/clock.dart';
+import 'a_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = <Widget>[
-    Clock(),
+    PageA(),
     Icon(Icons.list_alt_rounded),
     Icon(Icons.bar_chart_rounded)
   ];
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Device Info'),
         centerTitle: true,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -55,11 +55,9 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: _pages.elementAt(_selectedIndex),
-        ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.only(
